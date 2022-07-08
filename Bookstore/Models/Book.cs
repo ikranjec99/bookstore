@@ -1,5 +1,8 @@
-﻿namespace Bookstore.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Bookstore.Models
 {
+    [Index(nameof(AuthorId), nameof(GenreId), nameof(Title), nameof(Price))]
     public class Book
     {
         public Guid Id { get; set; }
